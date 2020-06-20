@@ -8,7 +8,6 @@ class carTruckMakeChoices(models.Model):
         ('CHEVROLET', 'Chevrolet'),
         ('DODGE', 'Dodge'),
         ('FORD', 'Ford'),
-        ('GMC', 'GMC'),
         ('HONDA', 'Honda')
     ]
 
@@ -25,6 +24,24 @@ class carModelChoices(models.Model):
                 ('128','128'),
                 ('228','228'),
                 ('530','530'),
+            )
+        ),
+        ('Chevrolet', (
+                ('Aveo','Aveo'),
+                ('Impala','Impala'),
+                ('Malibu','Malibu'),
+            )
+        ),
+        ('Dodge', (
+                ('Avenger','Avenger'),
+                ('Challenger','Challenger'),
+                ('Dart','Dart'),
+            )
+        ),
+        ('Honda', (
+                ('Accord','Accord'),
+                ('Fit','Fit'),
+                ('Insight','Insight'),
             )
         ),
     ]
