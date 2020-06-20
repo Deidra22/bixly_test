@@ -1,7 +1,7 @@
 from django.db import models
 import uuid
 from django.contrib import admin
-from garage_manager.choices import carTruckMakeChoices, carModelChoices ,carTruckSeatChoices
+from garage_manager.choices import carTruckMakeChoices, carModelChoices ,carTruckSeatChoices, carTruckServiceInterval
 
 class Cars(models.Model):
     class Meta:
@@ -14,7 +14,7 @@ class Cars(models.Model):
     make = models.CharField(max_length=20, choices=carTruckMakeChoices.MAKE_CHOICES, default='Acura')
     model = models.CharField(max_length=20, choices=carModelChoices.CAR_MODELS, default=None)
     seats = models.CharField(max_length=20, choices=carTruckSeatChoices.SEAT_CHOICES, default='2')
-
+    service_interval = models.CharField(max_length=12, choices=carTruckServiceInterval.SERVICE_INTERVAL, default='3 Months')
 
 class CarsAdmin(admin.ModelAdmin):
 
