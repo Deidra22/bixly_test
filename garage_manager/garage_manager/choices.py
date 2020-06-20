@@ -60,8 +60,8 @@ class carTruckSeatChoices(models.Model):
 # Car and Truck service interval choices    
 class carTruckServiceInterval(models.Model):
     SERVICE_INTERVAL = [
-        ('3 Months', '3 Months'),
-        ('6 Months', '6 Months'),
-        ('8 Months', '8 Months'),
-        ('12 Months', '12 Months'),
+        ('3000 Miles', '3000 Miles'),
+        ('6000 Miles', '6000 Miles'),
+        ('8000 Miles', '8000 Miles'),
+        ('10000 Miles', '10000 Miles'),
     ]
