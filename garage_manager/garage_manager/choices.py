@@ -1,8 +1,8 @@
 from django.db import models
 
-
-class carTruckMakeModelChoices(models.Model):
-    MAKE = [
+# Car and Truck make choices
+class carTruckMakeChoices(models.Model):
+    MAKE_CHOICES = [
         ('ACURA', 'Acura'),
         ('BMW', 'BMW'),
         ('CHEVROLET', 'Chevrolet'),
@@ -12,9 +12,30 @@ class carTruckMakeModelChoices(models.Model):
         ('HONDA', 'Honda')
     ]
 
-class carTruckSeatChoices(models.IntegerChoices):
-    twoSeater = 2
-    threeSeater = 3
-    fourSeater = 4
-    sixSeater = 6
-    sevenSeater = 7
+# Car model choices ONLY
+class carModelChoices(models.Model):
+    CAR_MODELS = [
+        ('Acura', (
+                ('ILX','ILX'),
+                ('MDX','MDX'),
+                ('RDX','RDX'),
+            )
+        ),
+        ('BMW', (
+                ('128','128'),
+                ('228','228'),
+                ('530','530'),
+            )
+        ),
+    ]
+
+# Car and Truck number of seats choices
+class carTruckSeatChoices(models.Model):
+    SEAT_CHOICES = [
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+        ('6', '6'),
+        ('7', '7')
+    ]
