@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'garage_manager',
     'cars',
     'trucks',
+    'boats',
     
 ]
 

@@ -1,7 +1,9 @@
 from django.db import models
 
+# Choices.py for Car and Truck apps
+
 # Car and Truck make choices
-class carTruckMakeChoices(models.Model):
+class CarTruckMakeChoices(models.Model):
     MAKE_CHOICES = [
         ('CHEVROLET', 'Chevrolet'),
         ('DODGE', 'Dodge'),
@@ -10,7 +12,7 @@ class carTruckMakeChoices(models.Model):
     ]
 
 # Car model choices ONLY
-class carModelChoices(models.Model):
+class CarModelChoices(models.Model):
     CAR_MODELS = [
         ('Chevrolet', (
                 ('Aveo','Aveo'),
@@ -39,7 +41,7 @@ class carModelChoices(models.Model):
     ]
 
 # Truck model choices ONLY
-class truckModelChoices(models.Model):
+class TruckModelChoices(models.Model):
     TRUCK_MODELS = [
         ('Chevrolet', (
                 ('Avalanche','Avalanche'),
@@ -68,7 +70,7 @@ class truckModelChoices(models.Model):
     ]
 
 # Car and Truck number of seats choices
-class carTruckSeatChoices(models.Model):
+class CarTruckSeatChoices(models.Model):
     SEAT_CHOICES = [
         ('2', '2'),
         ('3', '3'),
@@ -79,7 +81,7 @@ class carTruckSeatChoices(models.Model):
     ]
     
 # Car and Truck service interval choices    
-class carTruckServiceInterval(models.Model):
+class CarTruckServiceInterval(models.Model):
     SERVICE_INTERVAL = [
         ('3 Months', '3 Months'),
         ('6 Months', '6 Months'),
@@ -89,7 +91,7 @@ class carTruckServiceInterval(models.Model):
 
 
 # Truck Bed Length Choices
-class truckBedLength(models.Model):
+class TruckBedLength(models.Model):
     BED_LENGTH = [
         ('5ft','5ft'),
         ('5.5ft','5.5ft'),
@@ -101,7 +103,7 @@ class truckBedLength(models.Model):
     ]
 
 # Car and Truck Color Choices
-class carTruckColorChoices(models.Model):
+class CarTruckColorChoices(models.Model):
     COLOR_CHOICES = [
         ('RED', 'Red'),
         ('BLUE', 'Blue'),
