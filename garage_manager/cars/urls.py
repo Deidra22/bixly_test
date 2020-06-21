@@ -1,5 +1,5 @@
 from rest_framework import routers
-from .api import CarViewSet
+from garage_manager.api import CarViewSet
 
 router = routers.DefaultRouter()
 router.register('api/cars', CarViewSet, 'cars' )

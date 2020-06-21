@@ -1,12 +1,13 @@
 from django.db import models
-import datetime
+from datetime import date
 import uuid
 from django.contrib import admin
-from garage_manager.choices import carTruckMakeChoices, carModelChoices, carTruckSeatChoices, carTruckServiceInterval, carTruckColorChoices
+from garage_manager.choices import carTruckMakeChoices, truckModelChoices, carTruckSeatChoices, carTruckServiceInterval, truckBedLength, carTruckColorChoices
 
-class Cars(models.Model):
+
+class Trucks(models.Model):
     class Meta:
-        verbose_name_plural = 'Cars'
+        verbose_name_plural = 'Trucks'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     vin = models.CharField(max_length=17, default=None)
@@ -15,14 +16,14 @@ class Cars(models.Model):
     year = models.IntegerField(default=None, blank=False)
 
     make = models.CharField(max_length=20, choices=carTruckMakeChoices.MAKE_CHOICES, default='Chevrolet')
-    model = models.CharField(max_length=20, choices=carModelChoices.CAR_MODELS, default=None)
+    model = models.CharField(max_length=20, choices=truckModelChoices.TRUCK_MODELS, default=None)
     seats = models.CharField(max_length=20, choices=carTruckSeatChoices.SEAT_CHOICES, default='2')
+    bed_length = models.CharField(max_length=6, choices=truckBedLength.BED_LENGTH, default='5ft')
     color = models.CharField(max_length=6, choices=carTruckColorChoices.COLOR_CHOICES, default=None)
-    service_interval = models.CharField(max_length=10, choices=carTruckServiceInterval.SERVICE_INTERVAL, default='3 Months')
+    service_interval = models.CharField(max_length=12, choices=carTruckServiceInterval.SERVICE_INTERVAL, default='3 Months')
 
     next_service = models.DateField(verbose_name='Next Service Date')
 
-class CarsAdmin(admin.ModelAdmin):
 
-   list_display = ('id', 'vin', 'make', 'model', 'color', 'seats','current_mileage', 'service_interval', 'next_service')
-
+class TrucksAdmin(admin.ModelAdmin):
+     list_display = ('id', 'vin', 'make', 'model', 'color', 'seats','current_mileage', 'service_interval', 'next_service')
