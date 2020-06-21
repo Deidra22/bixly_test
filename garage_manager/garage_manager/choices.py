@@ -91,11 +91,22 @@ class carTruckServiceInterval(models.Model):
 # Truck Bed Length Choices
 class truckBedLength(models.Model):
     BED_LENGTH = [
-        ('5 ft','5ft'),
-        ('5.5 ft','5.5 ft'),
-        ('6 ft','6 ft'),
-        ('6.5 ft','6.5 ft'),
-        ('7 ft','7 ft'),
-        ('7.5 ft','7.5 ft'),
-        ('8 ft','8 ft'),
+        ('5ft','5ft'),
+        ('5.5ft','5.5ft'),
+        ('6ft','6ft'),
+        ('6.5ft','6.5ft'),
+        ('7ft','7ft'),
+        ('7.5ft','7.5ft'),
+        ('8ft','8ft'),
+    ]
+
+# Car and Truck Color Choices
+class carTruckColorChoices(models.Model):
+    COLOR_CHOICES = [
+        ('RED', 'Red'),
+        ('BLUE', 'Blue'),
+        ('BLACK', 'Black'),
+        ('SILVER', 'Silver'),
+        ('WHITE', 'White'),
+        ('GOLD', 'Gold')
     ]
