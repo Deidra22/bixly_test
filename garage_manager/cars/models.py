@@ -18,8 +18,6 @@ class Cars(models.Model):
     service_interval = models.CharField(max_length=10, choices=carTruckServiceInterval.SERVICE_INTERVAL, default='3 Months')
     next_service = models.DateTimeField(verbose_name='Next Service Date')
 
-    def __str__(self):
-        return f"{self.make} | {self.model} - {self.next_service}"
 
 class CarsAdmin(admin.ModelAdmin):
 

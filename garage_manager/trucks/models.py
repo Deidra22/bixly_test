@@ -21,8 +21,5 @@ class Trucks(models.Model):
     next_service = models.DateField(verbose_name='Next Service Date')
 
 
-    def __str__(self):
-        return f"{self.make} | {self.model} - {self.next_service}"
-
 class TrucksAdmin(admin.ModelAdmin):
      list_display = ('id', 'vin', 'make', 'model', 'seats','current_mileage', 'service_interval', 'next_service')
