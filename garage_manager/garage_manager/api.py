@@ -12,23 +12,23 @@ from boats.models import Boats
 # Cars viewset
 class CarViewSet(viewsets.ModelViewSet):
     queryset = Cars.objects.all()
-    permission_classes = [
-        permissions.AllowAny
-    ]
+    # permission_classes = [
+    #     permissions.AllowAny
+    # ]
     serializer_class = CarSerializer
 
 # Trucks viewset
 class TruckViewSet(viewsets.ModelViewSet):
     queryset = Trucks.objects.all()
-    permission_classes = [
-        permissions.AllowAny
-    ]
+    # permission_classes = [
+    #     permissions.AllowAny
+    # ]
     serializer_class = TruckSerializer
 
 # Boats viewset
 class BoatViewSet(viewsets.ModelViewSet):
     queryset = Boats.objects.all()
-    permission_classes = [
-        permissions.AllowAny
-    ]
+    # permission_classes = [
+    #     permissions.AllowAny
+    # ]
     serializer_class = BoatSerializer 
