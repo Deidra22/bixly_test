@@ -3,8 +3,6 @@ from django.db import models
 # Car and Truck make choices
 class carTruckMakeChoices(models.Model):
     MAKE_CHOICES = [
-        ('ACURA', 'Acura'),
-        ('BMW', 'BMW'),
         ('CHEVROLET', 'Chevrolet'),
         ('DODGE', 'Dodge'),
         ('FORD', 'Ford'),
@@ -14,18 +12,6 @@ class carTruckMakeChoices(models.Model):
 # Car model choices ONLY
 class carModelChoices(models.Model):
     CAR_MODELS = [
-        ('Acura', (
-                ('ILX','ILX'),
-                ('MDX','MDX'),
-                ('RDX','RDX'),
-            )
-        ),
-        ('BMW', (
-                ('128','128'),
-                ('228','228'),
-                ('530','530'),
-            )
-        ),
         ('Chevrolet', (
                 ('Aveo','Aveo'),
                 ('Impala','Impala'),
@@ -38,10 +24,45 @@ class carModelChoices(models.Model):
                 ('Dart','Dart'),
             )
         ),
+        ('Ford', (
+                ('C-Max','C-Max'),
+                ('Escape','Escape'),
+                ('Mustang','Mustang'),
+            )
+        ),
         ('Honda', (
                 ('Accord','Accord'),
                 ('Fit','Fit'),
                 ('Insight','Insight'),
+            )
+        ),
+    ]
+
+# Truck model choices ONLY
+class truckModelChoices(models.Model):
+    TRUCK_MODELS = [
+        ('Chevrolet', (
+                ('Avalanche','Avalanche'),
+                ('Colorado','Colorado'),
+                ('Silverado','Silverado'),
+            )
+        ),
+        ('Dodge', (
+                ('Dakota','Dakota'),
+                ('Ram 1500','Ram 1500'),
+                ('Ram 2500','Ram 2500'),
+            )
+        ),
+        ('Ford', (
+                ('F150','F150'),
+                ('F250','F250'),
+                ('F350','F350'),
+            )
+        ),
+        ('Honda', (
+                ('Ridgeline Sport','Ridgeline Sport'),
+                ('Ridgeline RTL','Ridgeline RTL'),
+                ('Ridgeline Black','Ridgeline Black'),
             )
         ),
     ]
@@ -60,8 +81,21 @@ class carTruckSeatChoices(models.Model):
 # Car and Truck service interval choices    
 class carTruckServiceInterval(models.Model):
     SERVICE_INTERVAL = [
-        ('3000 Miles', '3000 Miles'),
-        ('6000 Miles', '6000 Miles'),
-        ('8000 Miles', '8000 Miles'),
-        ('10000 Miles', '10000 Miles'),
+        ('3 Months', '3 Months'),
+        ('6 Months', '6 Months'),
+        ('9 Months', '9 Months'),
+        ('12 Months', '12 Months'),
+    ]
+
+
+# Truck Bed Length Choices
+class truckBedLength(models.Model):
+    BED_LENGTH = [
+        ('5 ft','5ft'),
+        ('5.5 ft','5.5 ft'),
+        ('6 ft','6 ft'),
+        ('6.5 ft','6.5 ft'),
+        ('7 ft','7 ft'),
+        ('7.5 ft','7.5 ft'),
+        ('8 ft','8 ft'),
     ]

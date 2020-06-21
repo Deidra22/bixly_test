@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'garage_manager',
     'cars',
-    'garage_manager'
+    'trucks',
+    
 ]
 
 MIDDLEWARE = [

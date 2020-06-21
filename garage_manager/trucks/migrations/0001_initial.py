@@ -13,19 +13,20 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Cars',
+            name='Trucks',
             fields=[
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
                 ('vin', models.CharField(default=None, max_length=17)),
                 ('current_mileage', models.IntegerField(null=True)),
                 ('make', models.CharField(choices=[('CHEVROLET', 'Chevrolet'), ('DODGE', 'Dodge'), ('FORD', 'Ford'), ('HONDA', 'Honda')], default='Chevrolet', max_length=20)),
-                ('model', models.CharField(choices=[('Chevrolet', (('Aveo', 'Aveo'), ('Impala', 'Impala'), ('Malibu', 'Malibu'))), ('Dodge', (('Avenger', 'Avenger'), ('Challenger', 'Challenger'), ('Dart', 'Dart'))), ('Ford', (('C-Max', 'C-Max'), ('Escape', 'Escape'), ('Mustang', 'Mustang'))), ('Honda', (('Accord', 'Accord'), ('Fit', 'Fit'), ('Insight', 'Insight')))], default=None, max_length=20)),
+                ('model', models.CharField(choices=[('Chevrolet', (('Avalanche', 'Avalanche'), ('Colorado', 'Colorado'), ('Silverado', 'Silverado'))), ('Dodge', (('Dakota', 'Dakota'), ('Ram 1500', 'Ram 1500'), ('Ram 2500', 'Ram 2500'))), ('Ford', (('F150', 'F150'), ('F250', 'F250'), ('F350', 'F350'))), ('Honda', (('Ridgeline Sport', 'Ridgeline Sport'), ('Ridgeline RTL', 'Ridgeline RTL'), ('Ridgeline Black', 'Ridgeline Black')))], default=None, max_length=20)),
                 ('seats', models.CharField(choices=[('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'), ('7', '7')], default='2', max_length=20)),
-                ('service_interval', models.CharField(choices=[('3 Months', '3 Months'), ('6 Months', '6 Months'), ('9 Months', '9 Months'), ('12 Months', '12 Months')], default='3 Months', max_length=10)),
+                ('bed_length', models.CharField(choices=[('5 ft', '5ft'), ('5.5 ft', '5.5 ft'), ('6 ft', '6 ft'), ('6.5 ft', '6.5 ft'), ('7 ft', '7 ft'), ('7.5 ft', '7.5 ft'), ('8 ft', '8 ft')], default='5 ft', max_length=6)),
+                ('service_interval', models.CharField(choices=[('3 Months', '3 Months'), ('6 Months', '6 Months'), ('9 Months', '9 Months'), ('12 Months', '12 Months')], default='3 Months', max_length=12)),
                 ('next_service', models.DateTimeField(verbose_name='Next Service Date')),
             ],
             options={
-                'verbose_name_plural': 'Cars',
+                'verbose_name_plural': 'Trucks',
             },
         ),
     ]
